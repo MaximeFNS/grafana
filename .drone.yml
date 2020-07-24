@@ -236,6 +236,20 @@ trigger:
 ---
 kind: pipeline
 type: docker
+name: test-pr-windows
+
+platform:
+  os: windows
+  arch: amd64
+  version: 1809
+
+trigger:
+  event:
+  - pull_request
+
+---
+kind: pipeline
+type: docker
 name: test-master
 
 platform:
